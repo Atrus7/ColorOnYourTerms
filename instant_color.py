@@ -5,18 +5,20 @@ import subprocess
 from subprocess import call
 import applescript
 import string
+##################FOR YOU TO CONFIGURE#######################
+COLOR_NAME = "Solarized Dark" #Default Value
+PATH_TO_ROOT_FOLDER = "/PATH/TO/YOUR/OWN/FOLDER"
+#############################################################
 
-COLOR_NAME = "Solarized Dark"
-PATH_TO_SCRIPT = "/Users/Chris/Desktop/Desktop Directory/Programming/iTerm2/"
-PATH_TO_PLIST = PATH_TO_SCRIPT + "com.googlecode.iterm2.plist"
+PATH_TO_PLIST = PATH_TO_ROOT_FOLDER + "com.googlecode.iterm2.plist"
 PROFILE_NUMBER = -1
 apple_script_to_run = ''''''
 #convert iTerm prefs into an xml so we can operate on it
-cmd = "plutil -convert xml1 -o - " + PATH_TO_PLIST + " > "+ PATH_TO_SCRIPT + "readable_prefs.xml"
+cmd = "plutil -convert xml1 -o - " + PATH_TO_PLIST + " > "+ PATH_TO_ROOT_FOLDER + "readable_prefs.xml"
 process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
 process.communicate()[0], "-actual"
 
-tree = ET.parse(PATH_TO_SCRIPT + 'readable_prefs.xml')
+tree = ET.parse(PATH_TO_ROOT_FOLDER + 'readable_prefs.xml')
 root = tree.getroot()
 root = root[0]
 
