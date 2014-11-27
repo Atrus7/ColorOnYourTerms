@@ -1,7 +1,11 @@
 ColorOnYourTerms
 ================
 
-Dynamic color change for iTerm2. NO RESTARTING. INSTANT GRATIFICATION. Once you load a color-preset into iTerm2, it'll be available to automatically be called. (NOTE: YOU have to do it. The default one's aren't stored in the same place)
+Dynamic color change for iTerm2.
+
+No restarting. Once you load a color-preset into iTerm2, it'll be available to automatically be called. (NOTE: YOU have to do it. The default one's aren't stored in the same place)
+
+REQUIREMENTS:
 
 Currently this program requires a Nightly build of iTerm2, since the stable version hasn't been updated to the new applescript.
 
